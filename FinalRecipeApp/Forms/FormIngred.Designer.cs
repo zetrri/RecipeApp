@@ -30,6 +30,7 @@ namespace FinalRecipeApp.Forms
         private void InitializeComponent()
         {
             this.panelWhole = new System.Windows.Forms.Panel();
+            this.button_close = new System.Windows.Forms.Button();
             this.listView_ingredienser = new System.Windows.Forms.ListView();
             this.columnHeader_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_enhet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,14 +52,33 @@ namespace FinalRecipeApp.Forms
             // panelWhole
             // 
             this.panelWhole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(113)))));
+            this.panelWhole.Controls.Add(this.button_close);
             this.panelWhole.Controls.Add(this.listView_ingredienser);
             this.panelWhole.Controls.Add(this.tableLayoutPanel_addNewIngred);
             this.panelWhole.Controls.Add(this.button_add_ing);
             this.panelWhole.Controls.Add(this.button_Delete_ing);
             this.panelWhole.Location = new System.Drawing.Point(0, 0);
+            this.panelWhole.Margin = new System.Windows.Forms.Padding(2);
             this.panelWhole.Name = "panelWhole";
-            this.panelWhole.Size = new System.Drawing.Size(1673, 1126);
+            this.panelWhole.Size = new System.Drawing.Size(1217, 751);
             this.panelWhole.TabIndex = 0;
+            // 
+            // button_close
+            // 
+            this.button_close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(81)))));
+            this.button_close.FlatAppearance.BorderSize = 0;
+            this.button_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_close.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
+            this.button_close.ForeColor = System.Drawing.SystemColors.Control;
+            this.button_close.Location = new System.Drawing.Point(1034, 688);
+            this.button_close.Margin = new System.Windows.Forms.Padding(2);
+            this.button_close.Name = "button_close";
+            this.button_close.Size = new System.Drawing.Size(181, 61);
+            this.button_close.TabIndex = 12;
+            this.button_close.Text = "Stäng";
+            this.button_close.UseVisualStyleBackColor = false;
+            this.button_close.Visible = false;
+            this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
             // listView_ingredienser
             // 
@@ -69,8 +89,9 @@ namespace FinalRecipeApp.Forms
             this.listView_ingredienser.Dock = System.Windows.Forms.DockStyle.Left;
             this.listView_ingredienser.HideSelection = false;
             this.listView_ingredienser.Location = new System.Drawing.Point(0, 0);
+            this.listView_ingredienser.Margin = new System.Windows.Forms.Padding(2);
             this.listView_ingredienser.Name = "listView_ingredienser";
-            this.listView_ingredienser.Size = new System.Drawing.Size(569, 1126);
+            this.listView_ingredienser.Size = new System.Drawing.Size(415, 751);
             this.listView_ingredienser.TabIndex = 11;
             this.listView_ingredienser.UseCompatibleStateImageBehavior = false;
             // 
@@ -97,7 +118,8 @@ namespace FinalRecipeApp.Forms
             this.tableLayoutPanel_addNewIngred.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel_addNewIngred.Controls.Add(this.textBox_ingredient_name, 0, 1);
             this.tableLayoutPanel_addNewIngred.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel_addNewIngred.Location = new System.Drawing.Point(584, 196);
+            this.tableLayoutPanel_addNewIngred.Location = new System.Drawing.Point(425, 131);
+            this.tableLayoutPanel_addNewIngred.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel_addNewIngred.Name = "tableLayoutPanel_addNewIngred";
             this.tableLayoutPanel_addNewIngred.RowCount = 8;
             this.tableLayoutPanel_addNewIngred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -108,7 +130,7 @@ namespace FinalRecipeApp.Forms
             this.tableLayoutPanel_addNewIngred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel_addNewIngred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel_addNewIngred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel_addNewIngred.Size = new System.Drawing.Size(251, 806);
+            this.tableLayoutPanel_addNewIngred.Size = new System.Drawing.Size(183, 537);
             this.tableLayoutPanel_addNewIngred.TabIndex = 10;
             this.tableLayoutPanel_addNewIngred.Visible = false;
             // 
@@ -120,9 +142,10 @@ namespace FinalRecipeApp.Forms
             this.button_done.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_done.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
             this.button_done.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_done.Location = new System.Drawing.Point(3, 603);
+            this.button_done.Location = new System.Drawing.Point(2, 404);
+            this.button_done.Margin = new System.Windows.Forms.Padding(2);
             this.button_done.Name = "button_done";
-            this.button_done.Size = new System.Drawing.Size(245, 94);
+            this.button_done.Size = new System.Drawing.Size(179, 63);
             this.button_done.TabIndex = 7;
             this.button_done.Text = "Klar";
             this.button_done.UseVisualStyleBackColor = false;
@@ -131,9 +154,10 @@ namespace FinalRecipeApp.Forms
             // textBox_ingredient_type
             // 
             this.textBox_ingredient_type.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_ingredient_type.Location = new System.Drawing.Point(3, 503);
+            this.textBox_ingredient_type.Location = new System.Drawing.Point(2, 337);
+            this.textBox_ingredient_type.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ingredient_type.Name = "textBox_ingredient_type";
-            this.textBox_ingredient_type.Size = new System.Drawing.Size(245, 29);
+            this.textBox_ingredient_type.Size = new System.Drawing.Size(179, 22);
             this.textBox_ingredient_type.TabIndex = 6;
             // 
             // label4
@@ -142,18 +166,20 @@ namespace FinalRecipeApp.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(94, 434);
+            this.label4.Location = new System.Drawing.Point(68, 289);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 32);
+            this.label4.Size = new System.Drawing.Size(46, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "Typ";
             // 
             // textBox_ingredient_unit
             // 
             this.textBox_ingredient_unit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_ingredient_unit.Location = new System.Drawing.Point(3, 303);
+            this.textBox_ingredient_unit.Location = new System.Drawing.Point(2, 203);
+            this.textBox_ingredient_unit.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ingredient_unit.Name = "textBox_ingredient_unit";
-            this.textBox_ingredient_unit.Size = new System.Drawing.Size(245, 29);
+            this.textBox_ingredient_unit.Size = new System.Drawing.Size(179, 22);
             this.textBox_ingredient_unit.TabIndex = 4;
             // 
             // label3
@@ -162,18 +188,20 @@ namespace FinalRecipeApp.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(80, 234);
+            this.label3.Location = new System.Drawing.Point(60, 155);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 32);
+            this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Enhet";
             // 
             // textBox_ingredient_name
             // 
             this.textBox_ingredient_name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_ingredient_name.Location = new System.Drawing.Point(3, 103);
+            this.textBox_ingredient_name.Location = new System.Drawing.Point(2, 69);
+            this.textBox_ingredient_name.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ingredient_name.Name = "textBox_ingredient_name";
-            this.textBox_ingredient_name.Size = new System.Drawing.Size(245, 29);
+            this.textBox_ingredient_name.Size = new System.Drawing.Size(179, 22);
             this.textBox_ingredient_name.TabIndex = 2;
             // 
             // label1
@@ -182,9 +210,10 @@ namespace FinalRecipeApp.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(51, 34);
+            this.label1.Location = new System.Drawing.Point(40, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 32);
+            this.label1.Size = new System.Drawing.Size(103, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingrediens";
             // 
@@ -195,9 +224,10 @@ namespace FinalRecipeApp.Forms
             this.button_add_ing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_add_ing.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
             this.button_add_ing.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_add_ing.Location = new System.Drawing.Point(587, 101);
+            this.button_add_ing.Location = new System.Drawing.Point(427, 67);
+            this.button_add_ing.Margin = new System.Windows.Forms.Padding(2);
             this.button_add_ing.Name = "button_add_ing";
-            this.button_add_ing.Size = new System.Drawing.Size(249, 91);
+            this.button_add_ing.Size = new System.Drawing.Size(181, 61);
             this.button_add_ing.TabIndex = 3;
             this.button_add_ing.Text = "Lägg till ingrediens";
             this.button_add_ing.UseVisualStyleBackColor = false;
@@ -210,9 +240,10 @@ namespace FinalRecipeApp.Forms
             this.button_Delete_ing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Delete_ing.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
             this.button_Delete_ing.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_Delete_ing.Location = new System.Drawing.Point(587, 2);
+            this.button_Delete_ing.Location = new System.Drawing.Point(427, 1);
+            this.button_Delete_ing.Margin = new System.Windows.Forms.Padding(2);
             this.button_Delete_ing.Name = "button_Delete_ing";
-            this.button_Delete_ing.Size = new System.Drawing.Size(252, 94);
+            this.button_Delete_ing.Size = new System.Drawing.Size(183, 63);
             this.button_Delete_ing.TabIndex = 3;
             this.button_Delete_ing.Text = "Ta Bort ingrediens";
             this.button_Delete_ing.UseVisualStyleBackColor = false;
@@ -220,12 +251,14 @@ namespace FinalRecipeApp.Forms
             // 
             // FormIngred
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1686, 1140);
+            this.ClientSize = new System.Drawing.Size(1226, 760);
             this.Controls.Add(this.panelWhole);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormIngred";
             this.Text = "FormIngred";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormIngred_FormClosing);
             this.panelWhole.ResumeLayout(false);
             this.tableLayoutPanel_addNewIngred.ResumeLayout(false);
             this.tableLayoutPanel_addNewIngred.PerformLayout();
@@ -250,5 +283,6 @@ namespace FinalRecipeApp.Forms
         private System.Windows.Forms.ColumnHeader columnHeader_Name;
         private System.Windows.Forms.ColumnHeader columnHeader_enhet;
         private System.Windows.Forms.ColumnHeader columnHeader_typ;
+        private System.Windows.Forms.Button button_close;
     }
 }

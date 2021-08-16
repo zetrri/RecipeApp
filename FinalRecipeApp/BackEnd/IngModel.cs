@@ -12,7 +12,7 @@ namespace FinalRecipeApp.BackEnd
 
         public string Enhet { get; set; }
 
-        public double Antal { get; set; }
+        public decimal Antal { get; set; }
 
         public string typ { get; set; }
     }
