@@ -401,9 +401,9 @@ namespace FinalRecipeApp.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic Medium", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(99, 185);
+            this.label1.Location = new System.Drawing.Point(105, 187);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 26);
+            this.label1.Size = new System.Drawing.Size(49, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tagg";
             // 
@@ -422,9 +422,9 @@ namespace FinalRecipeApp.Forms
             this.labelRecipeName.AutoSize = true;
             this.labelRecipeName.Font = new System.Drawing.Font("Yu Gothic Medium", 12F, System.Drawing.FontStyle.Bold);
             this.labelRecipeName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelRecipeName.Location = new System.Drawing.Point(41, 9);
+            this.labelRecipeName.Location = new System.Drawing.Point(57, 11);
             this.labelRecipeName.Name = "labelRecipeName";
-            this.labelRecipeName.Size = new System.Drawing.Size(176, 26);
+            this.labelRecipeName.Size = new System.Drawing.Size(145, 21);
             this.labelRecipeName.TabIndex = 0;
             this.labelRecipeName.Text = "Receptets namn";
             // 
@@ -443,9 +443,9 @@ namespace FinalRecipeApp.Forms
             this.label_AmountPort.AutoSize = true;
             this.label_AmountPort.Font = new System.Drawing.Font("Yu Gothic Medium", 12F, System.Drawing.FontStyle.Bold);
             this.label_AmountPort.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_AmountPort.Location = new System.Drawing.Point(47, 97);
+            this.label_AmountPort.Location = new System.Drawing.Point(61, 99);
             this.label_AmountPort.Name = "label_AmountPort";
-            this.label_AmountPort.Size = new System.Drawing.Size(165, 26);
+            this.label_AmountPort.Size = new System.Drawing.Size(137, 21);
             this.label_AmountPort.TabIndex = 0;
             this.label_AmountPort.Text = "Antal Portioner";
             // 
@@ -538,9 +538,9 @@ namespace FinalRecipeApp.Forms
             this.label_ingred.AutoSize = true;
             this.label_ingred.Font = new System.Drawing.Font("Yu Gothic Medium", 12F, System.Drawing.FontStyle.Bold);
             this.label_ingred.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_ingred.Location = new System.Drawing.Point(81, 8);
+            this.label_ingred.Location = new System.Drawing.Point(92, 11);
             this.label_ingred.Name = "label_ingred";
-            this.label_ingred.Size = new System.Drawing.Size(119, 26);
+            this.label_ingred.Size = new System.Drawing.Size(97, 21);
             this.label_ingred.TabIndex = 0;
             this.label_ingred.Text = "Ingrediens";
             // 
@@ -550,9 +550,9 @@ namespace FinalRecipeApp.Forms
             this.label_antal_ing.AutoSize = true;
             this.label_antal_ing.Font = new System.Drawing.Font("Yu Gothic Medium", 12F, System.Drawing.FontStyle.Bold);
             this.label_antal_ing.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_antal_ing.Location = new System.Drawing.Point(108, 94);
+            this.label_antal_ing.Location = new System.Drawing.Point(114, 97);
             this.label_antal_ing.Name = "label_antal_ing";
-            this.label_antal_ing.Size = new System.Drawing.Size(65, 26);
+            this.label_antal_ing.Size = new System.Drawing.Size(53, 21);
             this.label_antal_ing.TabIndex = 0;
             this.label_antal_ing.Text = "Antal";
             // 
