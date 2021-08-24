@@ -80,8 +80,21 @@ namespace FinalRecipeApp.Forms
                     MessageBox.Show("indregiens already in list");
                 }
                 update_list();
+                textBox_ingredient_name.Clear();
+                textBox_ingredient_type.Clear();
+                textBox_ingredient_unit.Clear();
             }
             else MessageBox.Show("All fields must be filled");
+        }
+
+        private void button_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormIngred_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

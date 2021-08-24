@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml;
+using System.IO;
 
 namespace FinalRecipeApp.BackEnd
 {
@@ -13,23 +14,29 @@ namespace FinalRecipeApp.BackEnd
 
         public List<IngModel> get_indregients()
         {
-            XElement ingrediens = XElement.Load("ingredienser.xml");
+
             List<IngModel> mylist = new List<IngModel>();
-            foreach (var item in ingrediens.Descendants("namn"))
+            if (File.Exists("ingredienser.xml"))
             {
 
-                var adding = new IngModel();
-                //{ 
-                //    Name = item.Value.ToString()
-                //};
-                adding.Name = item.Value.ToString();
-                adding.Enhet = item.Parent.Descendants("enhet").First().Value.ToString();
-                adding.typ = item.Parent.Descendants("typ").First().Value.ToString();
 
-                mylist.Add(adding);
+                XElement ingrediens = XElement.Load("ingredienser.xml");
+
+                foreach (var item in ingrediens.Descendants("namn"))
+                {
+
+                    var adding = new IngModel();
+                    //{ 
+                    //    Name = item.Value.ToString()
+                    //};
+                    adding.Name = item.Value.ToString();
+                    adding.Enhet = item.Parent.Descendants("enhet").First().Value.ToString();
+                    adding.typ = item.Parent.Descendants("typ").First().Value.ToString();
+
+                    mylist.Add(adding);
+                }
+                mylist.Sort(new NameComparer());
             }
-            mylist.Sort(new NameComparer());
-
             return mylist;
         }
 

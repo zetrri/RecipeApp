@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace FinalRecipeApp.Forms
 {
+    
     public partial class FormRecipe : Form
     {
         BackEnd.ClassRecipes recipes = new BackEnd.ClassRecipes();
@@ -37,7 +38,7 @@ namespace FinalRecipeApp.Forms
 
             return mylist;
         }
-        private void update_list()
+        public void update_list()
         {
             listBox_recipes.Items.Clear();
             List<BackEnd.RecipeModel> mylist = new List<BackEnd.RecipeModel>();
@@ -48,7 +49,7 @@ namespace FinalRecipeApp.Forms
             }
         }
 
-        private void init_list() 
+        public void init_list() 
         {
             ingredienslist = ingrediens.get_indregients();
             foreach (var item in ingredienslist)
@@ -91,6 +92,7 @@ namespace FinalRecipeApp.Forms
 
         private void listBox_recipes_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             listView_ing.Items.Clear();
             listView_info.Items.Clear();
             List<BackEnd.RecipeModel> mylist = new List<BackEnd.RecipeModel>();
@@ -109,15 +111,21 @@ namespace FinalRecipeApp.Forms
             listView_ing.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             listView_info.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             listView_info.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            
+        }
+
+        private void remove_recipe(string name)
+        {
+            BackEnd.ClassRecipes classRecipes = new BackEnd.ClassRecipes();
+            classRecipes.remove_recipe(name);
+            update_list();
         }
 
         private void button_remove_Click(object sender, EventArgs e)
         {
             if (listBox_recipes.SelectedIndex != -1)
             {
-                BackEnd.ClassRecipes classRecipes = new BackEnd.ClassRecipes();
-                classRecipes.remove_recipe(listBox_recipes.SelectedItem.ToString());
-                update_list();
+                remove_recipe(listBox_recipes.SelectedItem.ToString());
             }
             else
             {
@@ -139,12 +147,13 @@ namespace FinalRecipeApp.Forms
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             valdingrediens = ingredienslist.Find(x => x.Name == comboBox1.SelectedItem.ToString());
+
             
         }
 
         private void button_add_ingrediens_Click(object sender, EventArgs e)
         {
-            valdingrediens.Antal = Double.Parse(textBox_antal.Text.ToString());
+            valdingrediens.Antal = decimal.Parse(textBox_antal.Text.ToString());
             var tobeadded = new ListViewItem(new[] { valdingrediens.Name.ToString(), valdingrediens.Antal.ToString(), valdingrediens.Enhet.ToString() });
             listView_selected_ingredienses.Items.Add(tobeadded);
             newrecipeinglist.Add(valdingrediens);
@@ -152,13 +161,20 @@ namespace FinalRecipeApp.Forms
 
         private void button_Done_Click(object sender, EventArgs e)
         {
+            //var here=  listView_selected_ingredienses.GetItemAt(1,2);
+            var Recipelist = get_recipes();
+            var recipename = textBox_recipename.Text.ToString();
+            if (Recipelist.Find(x => x.Name == recipename)!= null) 
+            {
+                remove_recipe(recipename);
+            }
             classRecipes.add_recipe(textBox_recipename.Text.ToString(), Int32.Parse(textBox_amount_port.Text.ToString()), taggar, newrecipeinglist);
             clearall();
             update_list();
         }
         private void clearall()
         {
-            listView_selected_ingredienses.Clear();
+            listView_selected_ingredienses.Items.Clear();
             listView_tags.Items.Clear();
             textBox_amount_port.Clear();
             textBox_antal.Clear();
@@ -179,6 +195,83 @@ namespace FinalRecipeApp.Forms
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void set_panels(bool show)
+        {
+            panel_hidden.Visible = show;
+            tableLayoutPanel_adding.Visible = show;
+            listView_selected_ingredienses.Visible = show;
+            
+        }
+
+        private bool isPanelHidden()
+        {
+            return panel_hidden.Visible;
+        }
+
+        private void button_edit_Click(object sender, EventArgs e)
+        {
+            if (listBox_recipes.SelectedIndex != -1 && isPanelHidden() == false)
+            {
+                newrecipeinglist.Clear();
+                taggar.Clear();
+                set_panels(true);
+                BackEnd.ClassRecipes classRecipes = new BackEnd.ClassRecipes();
+                //var choosed = classRecipes.findrecipe(listBox_recipes.SelectedItem.ToString());
+                List<BackEnd.IngModel> ingredients = recipes.ingredientsinRecipe(listBox_recipes.SelectedItem.ToString());
+                var recipe = recipes.GetRecipe(listBox_recipes.SelectedItem.ToString());
+                foreach (var item in ingredients)
+                {
+                    var tobeadded = new ListViewItem(new[] { item.Name.ToString(), item.Antal.ToString(), item.Enhet.ToString() });
+                    listView_selected_ingredienses.Items.Add(tobeadded);
+                    BackEnd.IngModel temp = new BackEnd.IngModel();
+                    temp.Name = item.Name.ToString();
+                    temp.Antal = decimal.Parse(item.Antal.ToString());
+                    temp.Enhet = item.Enhet.ToString();
+                    newrecipeinglist.Add(temp);
+                    
+                }
+                taggar.Add(recipe.tagg);
+                //var tag = recipe.tagg;
+                listView_tags.Items.Add( recipe.tagg );
+                listView_selected_ingredienses.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                listView_selected_ingredienses.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+                listView_selected_ingredienses.Refresh();
+                textBox_recipename.Text = recipe.Name.ToString();
+                textBox_amount_port.Text = recipe.portioner.ToString();
+            }
+            else
+            {
+                set_panels(false);
+                clearall();
+            }
+            
+            
+        }
+
+        private void button_remove_ing_Click(object sender, EventArgs e)
+        {
+            var selectedingrediens = listView_selected_ingredienses.SelectedItems;
+            foreach(ListViewItem item in selectedingrediens)
+            {
+                listView_selected_ingredienses.Items.Remove(item);
+                newrecipeinglist.Remove(newrecipeinglist.Find(x => x.Name == item.Text.ToString())) ;
+               
+            }
+            
+        }
+
+        private void button_addnewing_Click(object sender, EventArgs e)
+        {
+            FormIngred form = new FormIngred();
+            form.Show();
+            update_list();
+            
+        }
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            init_list();
         }
     }
 }

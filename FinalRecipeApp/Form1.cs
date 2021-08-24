@@ -21,6 +21,7 @@ namespace FinalRecipeApp
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void ActivateButton(object btnSender)
@@ -80,7 +81,7 @@ namespace FinalRecipeApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.FormLogin(), sender);
         }
 
         private void panel_TitleRecipe_MouseDown(object sender, MouseEventArgs e)
