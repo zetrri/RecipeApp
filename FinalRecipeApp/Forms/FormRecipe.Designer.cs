@@ -211,15 +211,15 @@ namespace FinalRecipeApp.Forms
             // 
             // columnHeader_name
             // 
-            this.columnHeader_name.Text = "Namn";
+            this.columnHeader_name.Text = "Name";
             // 
             // columnHeader_amount
             // 
-            this.columnHeader_amount.Text = "Antal";
+            this.columnHeader_amount.Text = "Amount";
             // 
             // columnHeader_unit
             // 
-            this.columnHeader_unit.Text = "Enhet";
+            this.columnHeader_unit.Text = "Unit";
             // 
             // tableLayoutPanel2
             // 
@@ -257,15 +257,15 @@ namespace FinalRecipeApp.Forms
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Namn";
+            this.columnHeader1.Text = "Name";
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Portioner";
+            this.columnHeader2.Text = "Portions";
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Typ";
+            this.columnHeader3.Text = "Type";
             // 
             // listBox_recipes
             // 
@@ -320,15 +320,15 @@ namespace FinalRecipeApp.Forms
             // 
             // columnHeader_nameIng
             // 
-            this.columnHeader_nameIng.Text = "Namn";
+            this.columnHeader_nameIng.Text = "Name";
             // 
             // columnHeader_amount_ing
             // 
-            this.columnHeader_amount_ing.Text = "Antal";
+            this.columnHeader_amount_ing.Text = "Amount";
             // 
             // columnHeader_unit_ing
             // 
-            this.columnHeader_unit_ing.Text = "Enhet";
+            this.columnHeader_unit_ing.Text = "Unit";
             // 
             // tableLayoutPanel_recipenameTag
             // 

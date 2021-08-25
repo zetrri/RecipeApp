@@ -94,15 +94,15 @@ namespace FinalRecipeApp.Forms
             // 
             // columnHeader_Name
             // 
-            this.columnHeader_Name.Text = "Namn";
+            this.columnHeader_Name.Text = "Name";
             // 
             // columnHeader_enhet
             // 
-            this.columnHeader_enhet.Text = "Enhet";
+            this.columnHeader_enhet.Text = "Unit";
             // 
             // columnHeader_typ
             // 
-            this.columnHeader_typ.Text = "Typ";
+            this.columnHeader_typ.Text = "Type";
             // 
             // tableLayoutPanel_addNewIngred
             // 
