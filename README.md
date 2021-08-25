@@ -15,7 +15,7 @@ the main screens and features are presented below, but generally its used for:
 - when a new ingredient is added in the Recipe pages, the list of ingredients may not be updated. sometimes a refresh of the page is needed ( which defeats the purpose of that button)
 - there are very few error checks in the textfields, be careful when used
 - in the menu page, if a recipe is choosed for one day there is no option to make it empty again. 
-- Is scaling is used on windows the interface may look broken, depending on setting
+- If scaling is used on windows the interface may look broken, depending on setting
 
 
 
