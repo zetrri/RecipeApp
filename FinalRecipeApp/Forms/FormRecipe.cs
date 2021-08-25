@@ -147,6 +147,7 @@ namespace FinalRecipeApp.Forms
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             valdingrediens = ingredienslist.Find(x => x.Name == comboBox1.SelectedItem.ToString());
+            label_currentunit.Text = valdingrediens.Enhet.ToString();
 
             
         }

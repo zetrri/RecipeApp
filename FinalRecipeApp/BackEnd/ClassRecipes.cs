@@ -16,6 +16,8 @@ namespace FinalRecipeApp.BackEnd
 
         public List<RecipeModel> get_Recipes()
         {
+            var style = NumberStyles.Number | NumberStyles.AllowCurrencySymbol;
+            var culture = CultureInfo.CreateSpecificCulture("en-US");
 
 
             if (File.Exists("recept.xml"))
@@ -43,7 +45,8 @@ namespace FinalRecipeApp.BackEnd
 
                         ingrediens.Name = item2.Element("namn").Value.ToString();
 
-                        ingrediens.Antal = System.Convert.ToDecimal(item2.Element("antal").Value.ToString());
+                        //ingrediens.Antal = System.Convert.ToDecimal(item2.Element("antal").Value.ToString());
+                        ingrediens.Antal = Decimal.Parse(item2.Element("antal").Value.ToString(), style, culture);
                         ingrediens.Enhet = item2.Element("enhet").Value.ToString();
 
                         inglist.Add(ingrediens);
