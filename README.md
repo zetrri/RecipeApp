@@ -1,7 +1,7 @@
 # RecipeApp
 
 ## Notes
-This is the first version of the program, it is buggy and its not always behaving as expedted. It's also my first C# program so the code is certainly not good,
+This is the first version of the program, it is buggy and its not always behaving as expected. It's also my first C# program so the code is certainly not good,
 but it was a fun project. 
 the main screens and features are presented below, but generally its used for:
 - Saving recipes and their ingredients
