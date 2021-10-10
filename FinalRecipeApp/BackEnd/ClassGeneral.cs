@@ -69,6 +69,7 @@ namespace FinalRecipeApp.BackEnd
                     }
                 }
             }
+            
             Process.Start("Matlista.csv");
         }
     }

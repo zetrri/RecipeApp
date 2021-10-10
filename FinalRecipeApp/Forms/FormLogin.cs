@@ -12,6 +12,7 @@ namespace FinalRecipeApp.Forms
 {
     public partial class FormLogin : Form
     {
+        
         public FormLogin()
         {
             InitializeComponent();
@@ -28,5 +29,7 @@ namespace FinalRecipeApp.Forms
                 labelSetStatus.ForeColor = Color.Red;
             }
         }
+
+        
     }
 }

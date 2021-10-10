@@ -72,6 +72,9 @@ namespace FinalRecipeApp.Forms
             this.comboBox_saturday = new System.Windows.Forms.ComboBox();
             this.comboBox_sunday = new System.Windows.Forms.ComboBox();
             this.button_Create_menu = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.checkBox_Firebase = new System.Windows.Forms.CheckBox();
+            this.textBox_Firebase = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel_EditMenu.SuspendLayout();
@@ -83,6 +86,9 @@ namespace FinalRecipeApp.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(113)))));
+            this.panel1.Controls.Add(this.textBox_Firebase);
+            this.panel1.Controls.Add(this.checkBox_Firebase);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.button_check);
             this.panel1.Controls.Add(this.tableLayoutPanel3);
             this.panel1.Controls.Add(this.button_rand);
@@ -90,8 +96,9 @@ namespace FinalRecipeApp.Forms
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.button_Create_menu);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1673, 1126);
+            this.panel1.Size = new System.Drawing.Size(1369, 938);
             this.panel1.TabIndex = 0;
             // 
             // button_check
@@ -101,9 +108,10 @@ namespace FinalRecipeApp.Forms
             this.button_check.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_check.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
             this.button_check.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_check.Location = new System.Drawing.Point(403, 210);
+            this.button_check.Location = new System.Drawing.Point(330, 175);
+            this.button_check.Margin = new System.Windows.Forms.Padding(2);
             this.button_check.Name = "button_check";
-            this.button_check.Size = new System.Drawing.Size(249, 92);
+            this.button_check.Size = new System.Drawing.Size(204, 77);
             this.button_check.TabIndex = 11;
             this.button_check.Text = "Check";
             this.button_check.UseVisualStyleBackColor = false;
@@ -116,12 +124,11 @@ namespace FinalRecipeApp.Forms
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.listView_ingredients, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel_EditMenu, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(770, 9);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(630, 7);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(899, 1113);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(736, 927);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // listView_ingredients
@@ -132,11 +139,11 @@ namespace FinalRecipeApp.Forms
             this.columnHeader_unit_ing});
             this.listView_ingredients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView_ingredients.HideSelection = false;
-            this.listView_ingredients.Location = new System.Drawing.Point(453, 3);
-            this.listView_ingredients.Margin = new System.Windows.Forms.Padding(4, 3, 1, 3);
+            this.listView_ingredients.Location = new System.Drawing.Point(371, 2);
+            this.listView_ingredients.Margin = new System.Windows.Forms.Padding(3, 2, 1, 2);
             this.listView_ingredients.MultiSelect = false;
             this.listView_ingredients.Name = "listView_ingredients";
-            this.listView_ingredients.Size = new System.Drawing.Size(445, 1107);
+            this.listView_ingredients.Size = new System.Drawing.Size(364, 923);
             this.listView_ingredients.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView_ingredients.TabIndex = 3;
             this.listView_ingredients.UseCompatibleStateImageBehavior = false;
@@ -171,8 +178,7 @@ namespace FinalRecipeApp.Forms
             this.tableLayoutPanel_EditMenu.Controls.Add(this.button_add_unknown, 1, 5);
             this.tableLayoutPanel_EditMenu.Controls.Add(this.textBox_AddUnknownUnit, 1, 4);
             this.tableLayoutPanel_EditMenu.Controls.Add(this.textBox_addUnknownName, 1, 2);
-            this.tableLayoutPanel_EditMenu.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel_EditMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel_EditMenu.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel_EditMenu.Name = "tableLayoutPanel_EditMenu";
             this.tableLayoutPanel_EditMenu.RowCount = 6;
             this.tableLayoutPanel_EditMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -181,7 +187,7 @@ namespace FinalRecipeApp.Forms
             this.tableLayoutPanel_EditMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel_EditMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel_EditMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel_EditMenu.Size = new System.Drawing.Size(441, 602);
+            this.tableLayoutPanel_EditMenu.Size = new System.Drawing.Size(361, 502);
             this.tableLayoutPanel_EditMenu.TabIndex = 4;
             this.tableLayoutPanel_EditMenu.Visible = false;
             // 
@@ -191,9 +197,10 @@ namespace FinalRecipeApp.Forms
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(66, 428);
+            this.label11.Location = new System.Drawing.Point(53, 355);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 43);
+            this.label11.Size = new System.Drawing.Size(73, 36);
             this.label11.TabIndex = 21;
             this.label11.Text = "Unit";
             // 
@@ -203,9 +210,10 @@ namespace FinalRecipeApp.Forms
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(39, 328);
+            this.label10.Location = new System.Drawing.Point(29, 272);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(142, 43);
+            this.label10.Size = new System.Drawing.Size(121, 36);
             this.label10.TabIndex = 19;
             this.label10.Text = "Amount";
             // 
@@ -215,9 +223,10 @@ namespace FinalRecipeApp.Forms
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Yu Gothic Medium", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(18, 214);
+            this.label9.Location = new System.Drawing.Point(10, 176);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(184, 72);
+            this.label9.Size = new System.Drawing.Size(160, 62);
             this.label9.TabIndex = 17;
             this.label9.Text = "Add another item";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -229,9 +238,10 @@ namespace FinalRecipeApp.Forms
             this.button_changeamount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_changeamount.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
             this.button_changeamount.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_changeamount.Location = new System.Drawing.Point(223, 103);
+            this.button_changeamount.Location = new System.Drawing.Point(182, 85);
+            this.button_changeamount.Margin = new System.Windows.Forms.Padding(2);
             this.button_changeamount.Name = "button_changeamount";
-            this.button_changeamount.Size = new System.Drawing.Size(215, 92);
+            this.button_changeamount.Size = new System.Drawing.Size(176, 77);
             this.button_changeamount.TabIndex = 15;
             this.button_changeamount.Text = "Change amount";
             this.button_changeamount.UseVisualStyleBackColor = false;
@@ -244,9 +254,10 @@ namespace FinalRecipeApp.Forms
             this.buttonRemoveIngredient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemoveIngredient.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
             this.buttonRemoveIngredient.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonRemoveIngredient.Location = new System.Drawing.Point(3, 103);
+            this.buttonRemoveIngredient.Location = new System.Drawing.Point(2, 85);
+            this.buttonRemoveIngredient.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRemoveIngredient.Name = "buttonRemoveIngredient";
-            this.buttonRemoveIngredient.Size = new System.Drawing.Size(214, 92);
+            this.buttonRemoveIngredient.Size = new System.Drawing.Size(175, 77);
             this.buttonRemoveIngredient.TabIndex = 14;
             this.buttonRemoveIngredient.Text = "Remove ingredient";
             this.buttonRemoveIngredient.UseVisualStyleBackColor = false;
@@ -255,9 +266,10 @@ namespace FinalRecipeApp.Forms
             // textBox_ingredient_amount
             // 
             this.textBox_ingredient_amount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_ingredient_amount.Location = new System.Drawing.Point(223, 35);
+            this.textBox_ingredient_amount.Location = new System.Drawing.Point(182, 28);
+            this.textBox_ingredient_amount.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ingredient_amount.Name = "textBox_ingredient_amount";
-            this.textBox_ingredient_amount.Size = new System.Drawing.Size(215, 29);
+            this.textBox_ingredient_amount.Size = new System.Drawing.Size(177, 26);
             this.textBox_ingredient_amount.TabIndex = 13;
             // 
             // label8
@@ -266,18 +278,20 @@ namespace FinalRecipeApp.Forms
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(39, 28);
+            this.label8.Location = new System.Drawing.Point(29, 23);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(142, 43);
+            this.label8.Size = new System.Drawing.Size(121, 36);
             this.label8.TabIndex = 11;
             this.label8.Text = "Amount";
             // 
             // textBox_AddUnknownAmount
             // 
             this.textBox_AddUnknownAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_AddUnknownAmount.Location = new System.Drawing.Point(223, 335);
+            this.textBox_AddUnknownAmount.Location = new System.Drawing.Point(182, 277);
+            this.textBox_AddUnknownAmount.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_AddUnknownAmount.Name = "textBox_AddUnknownAmount";
-            this.textBox_AddUnknownAmount.Size = new System.Drawing.Size(215, 29);
+            this.textBox_AddUnknownAmount.Size = new System.Drawing.Size(177, 26);
             this.textBox_AddUnknownAmount.TabIndex = 18;
             // 
             // button_add_unknown
@@ -287,9 +301,10 @@ namespace FinalRecipeApp.Forms
             this.button_add_unknown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_add_unknown.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
             this.button_add_unknown.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_add_unknown.Location = new System.Drawing.Point(223, 503);
+            this.button_add_unknown.Location = new System.Drawing.Point(182, 417);
+            this.button_add_unknown.Margin = new System.Windows.Forms.Padding(2);
             this.button_add_unknown.Name = "button_add_unknown";
-            this.button_add_unknown.Size = new System.Drawing.Size(215, 92);
+            this.button_add_unknown.Size = new System.Drawing.Size(176, 77);
             this.button_add_unknown.TabIndex = 20;
             this.button_add_unknown.Text = "Add";
             this.button_add_unknown.UseVisualStyleBackColor = false;
@@ -298,17 +313,19 @@ namespace FinalRecipeApp.Forms
             // textBox_AddUnknownUnit
             // 
             this.textBox_AddUnknownUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_AddUnknownUnit.Location = new System.Drawing.Point(223, 435);
+            this.textBox_AddUnknownUnit.Location = new System.Drawing.Point(182, 360);
+            this.textBox_AddUnknownUnit.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_AddUnknownUnit.Name = "textBox_AddUnknownUnit";
-            this.textBox_AddUnknownUnit.Size = new System.Drawing.Size(215, 29);
+            this.textBox_AddUnknownUnit.Size = new System.Drawing.Size(177, 26);
             this.textBox_AddUnknownUnit.TabIndex = 22;
             // 
             // textBox_addUnknownName
             // 
             this.textBox_addUnknownName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_addUnknownName.Location = new System.Drawing.Point(223, 235);
+            this.textBox_addUnknownName.Location = new System.Drawing.Point(182, 194);
+            this.textBox_addUnknownName.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_addUnknownName.Name = "textBox_addUnknownName";
-            this.textBox_addUnknownName.Size = new System.Drawing.Size(215, 29);
+            this.textBox_addUnknownName.Size = new System.Drawing.Size(177, 26);
             this.textBox_addUnknownName.TabIndex = 23;
             // 
             // button_rand
@@ -318,9 +335,10 @@ namespace FinalRecipeApp.Forms
             this.button_rand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_rand.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
             this.button_rand.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_rand.Location = new System.Drawing.Point(403, 318);
+            this.button_rand.Location = new System.Drawing.Point(330, 265);
+            this.button_rand.Margin = new System.Windows.Forms.Padding(2);
             this.button_rand.Name = "button_rand";
-            this.button_rand.Size = new System.Drawing.Size(249, 92);
+            this.button_rand.Size = new System.Drawing.Size(204, 77);
             this.button_rand.TabIndex = 10;
             this.button_rand.Text = "Randomize";
             this.button_rand.UseVisualStyleBackColor = false;
@@ -331,9 +349,10 @@ namespace FinalRecipeApp.Forms
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(81)))));
             this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Controls.Add(this.label_stats);
-            this.panel2.Location = new System.Drawing.Point(403, 3);
+            this.panel2.Location = new System.Drawing.Point(330, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(360, 198);
+            this.panel2.Size = new System.Drawing.Size(295, 165);
             this.panel2.TabIndex = 9;
             // 
             // tableLayoutPanel2
@@ -345,12 +364,13 @@ namespace FinalRecipeApp.Forms
             this.tableLayoutPanel2.Controls.Add(this.labelAmountPort, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.labelCountAmountPort, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.labelCountAmountDays, 1, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 46);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 38);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(337, 154);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(276, 128);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
             // labelAmountDays
@@ -359,9 +379,10 @@ namespace FinalRecipeApp.Forms
             this.labelAmountDays.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelAmountDays.Font = new System.Drawing.Font("Yu Gothic Medium", 10F, System.Drawing.FontStyle.Bold);
             this.labelAmountDays.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelAmountDays.Location = new System.Drawing.Point(3, 77);
+            this.labelAmountDays.Location = new System.Drawing.Point(2, 64);
+            this.labelAmountDays.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAmountDays.Name = "labelAmountDays";
-            this.labelAmountDays.Size = new System.Drawing.Size(251, 77);
+            this.labelAmountDays.Size = new System.Drawing.Size(206, 64);
             this.labelAmountDays.TabIndex = 6;
             this.labelAmountDays.Text = "Amount of days covered";
             // 
@@ -371,9 +392,10 @@ namespace FinalRecipeApp.Forms
             this.labelAmountPort.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelAmountPort.Font = new System.Drawing.Font("Yu Gothic Medium", 10F, System.Drawing.FontStyle.Bold);
             this.labelAmountPort.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelAmountPort.Location = new System.Drawing.Point(3, 0);
+            this.labelAmountPort.Location = new System.Drawing.Point(2, 0);
+            this.labelAmountPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAmountPort.Name = "labelAmountPort";
-            this.labelAmountPort.Size = new System.Drawing.Size(250, 77);
+            this.labelAmountPort.Size = new System.Drawing.Size(124, 64);
             this.labelAmountPort.TabIndex = 6;
             this.labelAmountPort.Text = "Amount of portions:";
             // 
@@ -382,9 +404,10 @@ namespace FinalRecipeApp.Forms
             this.labelCountAmountPort.AutoSize = true;
             this.labelCountAmountPort.Font = new System.Drawing.Font("Yu Gothic Medium", 10F, System.Drawing.FontStyle.Bold);
             this.labelCountAmountPort.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelCountAmountPort.Location = new System.Drawing.Point(260, 0);
+            this.labelCountAmountPort.Location = new System.Drawing.Point(212, 0);
+            this.labelCountAmountPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCountAmountPort.Name = "labelCountAmountPort";
-            this.labelCountAmountPort.Size = new System.Drawing.Size(28, 31);
+            this.labelCountAmountPort.Size = new System.Drawing.Size(24, 26);
             this.labelCountAmountPort.TabIndex = 6;
             this.labelCountAmountPort.Text = "0";
             // 
@@ -393,9 +416,10 @@ namespace FinalRecipeApp.Forms
             this.labelCountAmountDays.AutoSize = true;
             this.labelCountAmountDays.Font = new System.Drawing.Font("Yu Gothic Medium", 10F, System.Drawing.FontStyle.Bold);
             this.labelCountAmountDays.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelCountAmountDays.Location = new System.Drawing.Point(260, 77);
+            this.labelCountAmountDays.Location = new System.Drawing.Point(212, 64);
+            this.labelCountAmountDays.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCountAmountDays.Name = "labelCountAmountDays";
-            this.labelCountAmountDays.Size = new System.Drawing.Size(28, 31);
+            this.labelCountAmountDays.Size = new System.Drawing.Size(24, 26);
             this.labelCountAmountDays.TabIndex = 6;
             this.labelCountAmountDays.Text = "0";
             // 
@@ -404,9 +428,10 @@ namespace FinalRecipeApp.Forms
             this.label_stats.AutoSize = true;
             this.label_stats.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label_stats.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_stats.Location = new System.Drawing.Point(4, 3);
+            this.label_stats.Location = new System.Drawing.Point(3, 2);
+            this.label_stats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_stats.Name = "label_stats";
-            this.label_stats.Size = new System.Drawing.Size(173, 43);
+            this.label_stats.Size = new System.Drawing.Size(146, 36);
             this.label_stats.TabIndex = 6;
             this.label_stats.Text = "Statistics";
             // 
@@ -414,7 +439,7 @@ namespace FinalRecipeApp.Forms
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
             this.tableLayoutPanel1.Controls.Add(this.comboBox_monday, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
@@ -431,6 +456,7 @@ namespace FinalRecipeApp.Forms
             this.tableLayoutPanel1.Controls.Add(this.comboBox_sunday, 0, 13);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 14;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
@@ -447,7 +473,7 @@ namespace FinalRecipeApp.Forms
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(344, 1126);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(281, 938);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // comboBox_monday
@@ -456,9 +482,10 @@ namespace FinalRecipeApp.Forms
             this.comboBox_monday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_monday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_monday.FormattingEnabled = true;
-            this.comboBox_monday.Location = new System.Drawing.Point(3, 83);
+            this.comboBox_monday.Location = new System.Drawing.Point(2, 69);
+            this.comboBox_monday.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_monday.Name = "comboBox_monday";
-            this.comboBox_monday.Size = new System.Drawing.Size(338, 32);
+            this.comboBox_monday.Size = new System.Drawing.Size(277, 28);
             this.comboBox_monday.TabIndex = 8;
             this.comboBox_monday.SelectedIndexChanged += new System.EventHandler(this.comboBox_monday_SelectedIndexChanged);
             // 
@@ -468,9 +495,10 @@ namespace FinalRecipeApp.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(99, 18);
+            this.label1.Location = new System.Drawing.Point(78, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 43);
+            this.label1.Size = new System.Drawing.Size(125, 36);
             this.label1.TabIndex = 6;
             this.label1.Text = "Monday";
             // 
@@ -480,9 +508,10 @@ namespace FinalRecipeApp.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(96, 178);
+            this.label2.Location = new System.Drawing.Point(76, 149);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 43);
+            this.label2.Size = new System.Drawing.Size(129, 36);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tuesday";
             // 
@@ -492,9 +521,10 @@ namespace FinalRecipeApp.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(71, 338);
+            this.label3.Location = new System.Drawing.Point(54, 283);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 43);
+            this.label3.Size = new System.Drawing.Size(173, 36);
             this.label3.TabIndex = 6;
             this.label3.Text = "Wednesday";
             // 
@@ -504,9 +534,10 @@ namespace FinalRecipeApp.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(88, 498);
+            this.label4.Location = new System.Drawing.Point(69, 417);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 43);
+            this.label4.Size = new System.Drawing.Size(143, 36);
             this.label4.TabIndex = 6;
             this.label4.Text = "Thursday";
             // 
@@ -516,9 +547,10 @@ namespace FinalRecipeApp.Forms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(113, 658);
+            this.label5.Location = new System.Drawing.Point(90, 551);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 43);
+            this.label5.Size = new System.Drawing.Size(100, 36);
             this.label5.TabIndex = 6;
             this.label5.Text = "Friday";
             // 
@@ -528,9 +560,10 @@ namespace FinalRecipeApp.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(91, 818);
+            this.label6.Location = new System.Drawing.Point(71, 685);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(162, 43);
+            this.label6.Size = new System.Drawing.Size(139, 36);
             this.label6.TabIndex = 6;
             this.label6.Text = "Saturday";
             // 
@@ -540,9 +573,10 @@ namespace FinalRecipeApp.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(103, 978);
+            this.label7.Location = new System.Drawing.Point(82, 819);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 43);
+            this.label7.Size = new System.Drawing.Size(117, 36);
             this.label7.TabIndex = 6;
             this.label7.Text = "Sunday";
             // 
@@ -552,9 +586,10 @@ namespace FinalRecipeApp.Forms
             this.comboBox_tuesday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_tuesday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_tuesday.FormattingEnabled = true;
-            this.comboBox_tuesday.Location = new System.Drawing.Point(3, 243);
+            this.comboBox_tuesday.Location = new System.Drawing.Point(2, 203);
+            this.comboBox_tuesday.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_tuesday.Name = "comboBox_tuesday";
-            this.comboBox_tuesday.Size = new System.Drawing.Size(338, 32);
+            this.comboBox_tuesday.Size = new System.Drawing.Size(277, 28);
             this.comboBox_tuesday.TabIndex = 8;
             this.comboBox_tuesday.SelectedIndexChanged += new System.EventHandler(this.comboBox_monday_SelectedIndexChanged);
             // 
@@ -564,9 +599,10 @@ namespace FinalRecipeApp.Forms
             this.comboBox_wednesday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_wednesday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_wednesday.FormattingEnabled = true;
-            this.comboBox_wednesday.Location = new System.Drawing.Point(3, 403);
+            this.comboBox_wednesday.Location = new System.Drawing.Point(2, 337);
+            this.comboBox_wednesday.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_wednesday.Name = "comboBox_wednesday";
-            this.comboBox_wednesday.Size = new System.Drawing.Size(338, 32);
+            this.comboBox_wednesday.Size = new System.Drawing.Size(277, 28);
             this.comboBox_wednesday.TabIndex = 8;
             this.comboBox_wednesday.SelectedIndexChanged += new System.EventHandler(this.comboBox_monday_SelectedIndexChanged);
             // 
@@ -576,9 +612,10 @@ namespace FinalRecipeApp.Forms
             this.comboBox_thursday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_thursday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_thursday.FormattingEnabled = true;
-            this.comboBox_thursday.Location = new System.Drawing.Point(3, 563);
+            this.comboBox_thursday.Location = new System.Drawing.Point(2, 471);
+            this.comboBox_thursday.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_thursday.Name = "comboBox_thursday";
-            this.comboBox_thursday.Size = new System.Drawing.Size(338, 32);
+            this.comboBox_thursday.Size = new System.Drawing.Size(277, 28);
             this.comboBox_thursday.TabIndex = 8;
             this.comboBox_thursday.SelectedIndexChanged += new System.EventHandler(this.comboBox_monday_SelectedIndexChanged);
             // 
@@ -588,9 +625,10 @@ namespace FinalRecipeApp.Forms
             this.comboBox_friday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_friday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_friday.FormattingEnabled = true;
-            this.comboBox_friday.Location = new System.Drawing.Point(3, 723);
+            this.comboBox_friday.Location = new System.Drawing.Point(2, 605);
+            this.comboBox_friday.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_friday.Name = "comboBox_friday";
-            this.comboBox_friday.Size = new System.Drawing.Size(338, 32);
+            this.comboBox_friday.Size = new System.Drawing.Size(277, 28);
             this.comboBox_friday.TabIndex = 8;
             this.comboBox_friday.SelectedIndexChanged += new System.EventHandler(this.comboBox_monday_SelectedIndexChanged);
             // 
@@ -600,9 +638,10 @@ namespace FinalRecipeApp.Forms
             this.comboBox_saturday.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_saturday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_saturday.FormattingEnabled = true;
-            this.comboBox_saturday.Location = new System.Drawing.Point(3, 883);
+            this.comboBox_saturday.Location = new System.Drawing.Point(2, 739);
+            this.comboBox_saturday.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_saturday.Name = "comboBox_saturday";
-            this.comboBox_saturday.Size = new System.Drawing.Size(338, 32);
+            this.comboBox_saturday.Size = new System.Drawing.Size(277, 28);
             this.comboBox_saturday.TabIndex = 8;
             this.comboBox_saturday.SelectedIndexChanged += new System.EventHandler(this.comboBox_monday_SelectedIndexChanged);
             // 
@@ -614,10 +653,10 @@ namespace FinalRecipeApp.Forms
             this.comboBox_sunday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_sunday.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F);
             this.comboBox_sunday.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.comboBox_sunday.Location = new System.Drawing.Point(0, 1040);
+            this.comboBox_sunday.Location = new System.Drawing.Point(0, 871);
             this.comboBox_sunday.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox_sunday.Name = "comboBox_sunday";
-            this.comboBox_sunday.Size = new System.Drawing.Size(344, 32);
+            this.comboBox_sunday.Size = new System.Drawing.Size(281, 28);
             this.comboBox_sunday.Sorted = true;
             this.comboBox_sunday.TabIndex = 8;
             this.comboBox_sunday.SelectedIndexChanged += new System.EventHandler(this.comboBox_monday_SelectedIndexChanged);
@@ -630,23 +669,58 @@ namespace FinalRecipeApp.Forms
             this.button_Create_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Create_menu.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
             this.button_Create_menu.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_Create_menu.Location = new System.Drawing.Point(403, 435);
+            this.button_Create_menu.Location = new System.Drawing.Point(330, 362);
+            this.button_Create_menu.Margin = new System.Windows.Forms.Padding(2);
             this.button_Create_menu.Name = "button_Create_menu";
-            this.button_Create_menu.Size = new System.Drawing.Size(249, 92);
+            this.button_Create_menu.Size = new System.Drawing.Size(204, 77);
             this.button_Create_menu.TabIndex = 4;
             this.button_Create_menu.Text = "Create menu";
             this.button_Create_menu.UseVisualStyleBackColor = false;
             this.button_Create_menu.Click += new System.EventHandler(this.button_Create_menu_Click);
             // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.SystemColors.Control;
+            this.label13.Location = new System.Drawing.Point(327, 486);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(261, 29);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Firebase database ref:";
+            // 
+            // checkBox_Firebase
+            // 
+            this.checkBox_Firebase.AutoSize = true;
+            this.checkBox_Firebase.Font = new System.Drawing.Font("Yu Gothic Medium", 11F, System.Drawing.FontStyle.Bold);
+            this.checkBox_Firebase.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBox_Firebase.Location = new System.Drawing.Point(330, 450);
+            this.checkBox_Firebase.Name = "checkBox_Firebase";
+            this.checkBox_Firebase.Size = new System.Drawing.Size(183, 33);
+            this.checkBox_Firebase.TabIndex = 14;
+            this.checkBox_Firebase.Text = "Use Firebase";
+            this.checkBox_Firebase.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Firebase
+            // 
+            this.textBox_Firebase.Location = new System.Drawing.Point(330, 519);
+            this.textBox_Firebase.Name = "textBox_Firebase";
+            this.textBox_Firebase.Size = new System.Drawing.Size(238, 26);
+            this.textBox_Firebase.TabIndex = 15;
+            // 
             // FormFoodlist
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1754, 1202);
+            this.ClientSize = new System.Drawing.Size(1435, 1002);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormFoodlist";
             this.Text = "FormFoodlist";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel_EditMenu.ResumeLayout(false);
             this.tableLayoutPanel_EditMenu.PerformLayout();
@@ -705,5 +779,8 @@ namespace FinalRecipeApp.Forms
         private System.Windows.Forms.TextBox textBox_AddUnknownUnit;
         private System.Windows.Forms.TextBox textBox_addUnknownName;
         private System.Windows.Forms.Button button_check;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox_Firebase;
+        private System.Windows.Forms.CheckBox checkBox_Firebase;
     }
 }

@@ -115,6 +115,13 @@ namespace FinalRecipeApp
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //var fire = new BackEnd.FireBaseClass();
+            //fire.getfromFireBaseAsync().GetAwaiter();
+            //fire.sendtofirebase().GetAwaiter();
+        }
     }
 
     

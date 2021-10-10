@@ -130,6 +130,15 @@ namespace FinalRecipeApp.Forms
         private void button_Create_menu_Click(object sender, EventArgs e)
         {
             general.WriteToFile(ingredients);
+            if (checkBox_Firebase.Checked)
+            {
+                if (!String.IsNullOrWhiteSpace(textBox_Firebase.Text.ToString()))
+                {
+                    var fire = new BackEnd.FireBaseClass();
+                    var awaiter = fire.sendtofirebase(textBox_Firebase.Text.ToString(),ingredients).GetAwaiter();
+                    _ = awaiter.IsCompleted;
+                }
+            }
         }
 
         private void ShowEditableListView(List<BackEnd.RecipeModel> selected)
